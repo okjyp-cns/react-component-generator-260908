@@ -1,0 +1,23 @@
+{
+  "skill_name": "create-pr",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "현재 working directory의 변경사항을 분석해서 PR을 생성해줄래? 이 프로젝트는 한국 프로젝트야. 제목은 'feat: 새로운 기능 추가'로 하고, 영문/국문 자동 감지해서 국문 템플릿 사용해줘.",
+      "expected_output": "PR이 생성되고, 한국어 템플릿이 사용됨. PR 본문에 변경사항, 테스트 계획, 체크리스트 포함",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Create a PR for this repository. Detect the language automatically - if it's a Korean project use Korean template, if English use English template. Summarize the changes from git diff and generate the PR body with test plan and checklist.",
+      "expected_output": "PR created with appropriate template (Korean or English based on auto-detection). PR body includes changes summary, test plan, and checklist.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Repository에 새로운 변경사항이 있어. PR을 생성해주되, git log와 git diff를 분석해서 제목과 본문을 자동으로 작성해줄래. 템플릿은 프로젝트의 사용 언어에 맞춰서 선택해.",
+      "expected_output": "PR generated with auto-detected language template. Title and body content intelligently extracted from git history and changes",
+      "files": []
+    }
+  ]
+}
