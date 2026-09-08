@@ -1,0 +1,27 @@
+{
+  "eval_id": 2,
+  "eval_name": "auto-detect-language",
+  "prompt": "Create a PR for this repository. Detect the language automatically - if it's a Korean project use Korean template, if English use English template. Summarize the changes from git diff and generate the PR body with test plan and checklist.",
+  "assertions": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "description": "PR creation completed successfully"
+    },
+    {
+      "text": "프로젝트 언어가 올바르게 감지되었다",
+      "description": "한국 프로젝트면 국문 템플릿, 영문 프로젝트면 영문 템플릿이 사용됨"
+    },
+    {
+      "text": "PR 본문에 변경사항 요약이 포함되어 있다",
+      "description": "Summary/요약 섹션에 git changes를 기반으로 한 요약이 포함됨"
+    },
+    {
+      "text": "PR 본문에 테스트 계획이 포함되어 있다",
+      "description": "Test Plan/테스트 계획 섹션이 존재하고 내용이 작성됨"
+    },
+    {
+      "text": "PR 본문에 체크리스트가 포함되어 있다",
+      "description": "Checklist/체크리스트 섹션에 확인 항목들이 포함됨"
+    }
+  ]
+}

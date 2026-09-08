@@ -1,0 +1,9 @@
+{
+  "eval_id": "auto-detect",
+  "eval_name": "Language auto-detection and template selection",
+  "prompt": "Create a PR for this repository. Detect the language automatically - if it's a Korean project use Korean template, if English use English template. Summarize the changes from git diff and generate the PR body with test plan and checklist.",
+  "result_summary": "✓ Success: Korean project detected from README.md → Korean template applied",
+  "detected_language": "Korean",
+  "template_used": "template-ko.md",
+  "assertions": []
+}

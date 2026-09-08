@@ -1,0 +1,27 @@
+{
+  "eval_id": 3,
+  "eval_name": "git-analysis-pr-generation",
+  "prompt": "Repository에 새로운 변경사항이 있어. PR을 생성해주되, git log와 git diff를 분석해서 제목과 본문을 자동으로 작성해줄래. 템플릿은 프로젝트의 사용 언어에 맞춰서 선택해.",
+  "assertions": [
+    {
+      "name": "PR title generated",
+      "description": "PR 제목이 자동으로 생성되었는가?"
+    },
+    {
+      "name": "Language detection correct",
+      "description": "프로젝트 언어가 올바르게 감지되었는가? (한국어)"
+    },
+    {
+      "name": "Korean template used",
+      "description": "한국어 템플릿이 사용되었는가?"
+    },
+    {
+      "name": "PR body structured",
+      "description": "PR 본문이 적절한 섹션(요약, 변경사항, 테스트, 체크리스트)을 포함하는가?"
+    },
+    {
+      "name": "Git changes analyzed",
+      "description": "git log/diff가 분석되어 PR 본문에 반영되었는가?"
+    }
+  ]
+}

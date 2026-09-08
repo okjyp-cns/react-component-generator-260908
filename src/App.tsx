@@ -12,7 +12,7 @@ const PROVIDER_CONFIG = {
 } as const;
 
 function App() {
-  const [apiKey, setApiKey] = useLocalStorage<string>('rc-api-key', '');
+  const [apiKey, setApiKey] = useState<string>('');
   const [showKey, setShowKey] = useState(false);
   const [provider, setProvider] = useLocalStorage<Provider>('rc-provider', 'google');
   const [envKeys, setEnvKeys] = useState<Record<Provider, boolean>>({

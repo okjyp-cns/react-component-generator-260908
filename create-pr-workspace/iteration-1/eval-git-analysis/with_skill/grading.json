@@ -1,0 +1,31 @@
+{
+  "eval_name": "git-analysis-title-body",
+  "run_id": "eval-git-analysis-with_skill",
+  "expectations": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "passed": true,
+      "evidence": "create-pr 스킬을 통해 PR 본문이 생성되고 완전한 구조를 갖추고 있음"
+    },
+    {
+      "text": "PR 제목이 git log 분석으로 자동 생성되었다",
+      "passed": true,
+      "evidence": "PR 제목 'feat: create-pr 스킬 추가 및 언어별 템플릿 구성'이 git log의 최근 커밋 메시지 패턴을 따르고 있음"
+    },
+    {
+      "text": "PR 본문이 git diff 분석으로 자동 작성되었다",
+      "passed": true,
+      "evidence": "변경사항 섹션에서 create-pr 디렉토리의 파일 추가(SKILL.md, template-ko.md, template-en.md)가 정확히 반영됨"
+    },
+    {
+      "text": "올바른 언어 템플릿이 사용되었다",
+      "passed": true,
+      "evidence": "한국 프로젝트로 감지되어 국문 템플릿(template-ko.md)이 사용됨. 섹션 헤더가 모두 한국어임"
+    },
+    {
+      "text": "PR 본문에 통계 정보가 포함되어 있다",
+      "passed": true,
+      "evidence": "변경사항 섹션에서 파일 추가 통계(SKILL.md 97줄, 템플릿 각 48줄) 정보가 포함됨"
+    }
+  ]
+}

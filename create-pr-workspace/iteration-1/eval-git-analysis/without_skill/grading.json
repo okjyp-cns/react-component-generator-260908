@@ -1,0 +1,31 @@
+{
+  "eval_name": "git-analysis-title-body",
+  "run_id": "eval-git-analysis-without_skill",
+  "expectations": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "passed": true,
+      "evidence": "PR 본문이 수동으로 작성되어 완전한 구조를 갖춤"
+    },
+    {
+      "text": "PR 제목이 git log 분석으로 자동 생성되었다",
+      "passed": true,
+      "evidence": "git log를 분석하여 PR 제목이 작성됨"
+    },
+    {
+      "text": "PR 본문이 git diff 분석으로 자동 작성되었다",
+      "passed": true,
+      "evidence": "git diff를 분석하여 변경사항 섹션이 작성됨"
+    },
+    {
+      "text": "올바른 언어 템플릿이 사용되었다",
+      "passed": true,
+      "evidence": "한국 프로젝트 감지 후 국문 템플릿이 사용됨"
+    },
+    {
+      "text": "PR 본문에 통계 정보가 포함되어 있다",
+      "passed": true,
+      "evidence": "변경사항의 통계 정보(파일 수, 라인 수)가 포함됨"
+    }
+  ]
+}

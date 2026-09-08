@@ -1,0 +1,23 @@
+{
+  "eval_id": 1,
+  "eval_name": "korean-template-usage",
+  "prompt": "현재 working directory의 변경사항을 분석해서 PR을 생성해줄래? 이 프로젝트는 한국 프로젝트야. 제목은 'feat: 새로운 기능 추가'로 하고, 영문/국문 자동 감지해서 국문 템플릿 사용해줘.",
+  "assertions": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "description": "gh pr create가 성공적으로 실행되어 PR이 생성됨 (또는 생성 과정 명확히 보임)"
+    },
+    {
+      "text": "국문 템플릿이 사용되었다",
+      "description": "PR 본문에 '요약', '변경사항', '테스트 계획', '체크리스트' 등 한국어 섹션이 포함됨"
+    },
+    {
+      "text": "PR 제목에 'feat:' prefix가 포함되어 있다",
+      "description": "PR 제목이 'feat: ...' 형식으로 작성됨"
+    },
+    {
+      "text": "PR 본문에 변경된 파일 목록이 포함되어 있다",
+      "description": "Modified Files 섹션에 실제 변경된 파일들이 나열됨"
+    }
+  ]
+}

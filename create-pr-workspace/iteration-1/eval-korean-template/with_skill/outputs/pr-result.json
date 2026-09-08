@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "pr_url": "https://github.com/okjyp-cns/react-component-generator-260908/pull/1",
+  "pr_title": "feat: 새로운 기능 추가",
+  "pr_number": 1,
+  "language_detected": "korean",
+  "template_used": "template-ko.md",
+  "branch": "feat/create-pr-skill",
+  "base_branch": "main",
+  "commit_hash": "ad37e36",
+  "notes": "PR created successfully with Korean template. Language auto-detection used Korean template based on project content."
+}
