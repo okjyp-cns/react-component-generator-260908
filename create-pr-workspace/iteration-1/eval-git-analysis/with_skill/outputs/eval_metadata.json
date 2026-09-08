@@ -1,0 +1,36 @@
+{
+  "eval_id": 3,
+  "eval_name": "git-analysis-korean-template",
+  "prompt": "Repository에 새로운 변경사항이 있어. PR을 생성해주되, git log와 git diff를 분석해서 제목과 본문을 자동으로 작성해줄래. 템플릿은 프로젝트의 사용 언어에 맞춰서 선택해.",
+  "language_detected": "Korean",
+  "template_used": "template-ko.md",
+  "git_analysis": {
+    "commits_analyzed": 5,
+    "last_commit": "15086fa fix: 환경 설정 파일에서 노출된 API 키 제거",
+    "files_changed": ["create-pr/SKILL.md", "create-pr/references/template-ko.md", "create-pr/references/template-en.md"]
+  },
+  "pr_title_generated": "feat: create-pr 스킬 추가 및 언어별 템플릿 구성",
+  "pr_body_generated": true,
+  "assertions": [
+    {
+      "text": "프로젝트 언어가 한국어로 올바르게 감지됨",
+      "passed": true,
+      "evidence": "README.md의 한글 비율이 50% 초과로 감지"
+    },
+    {
+      "text": "한국어 템플릿이 사용됨",
+      "passed": true,
+      "evidence": "template-ko.md 내용으로 PR 본문 생성됨"
+    },
+    {
+      "text": "git log에서 제목이 자동 추출됨",
+      "passed": true,
+      "evidence": "최근 커밋 메시지를 기반으로 PR 제목 생성"
+    },
+    {
+      "text": "PR 본문에 모든 필수 섹션 포함",
+      "passed": true,
+      "evidence": "요약, 변경사항, 테스트 계획, 체크리스트 모두 포함"
+    }
+  ]
+}

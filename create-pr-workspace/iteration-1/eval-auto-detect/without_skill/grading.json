@@ -1,0 +1,31 @@
+{
+  "eval_name": "auto-detect-language",
+  "run_id": "eval-auto-detect-without_skill",
+  "expectations": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "passed": true,
+      "evidence": "수동으로 PR 본문이 작성되고 모든 필수 섹션이 포함됨"
+    },
+    {
+      "text": "프로젝트 언어가 올바르게 감지되었다",
+      "passed": true,
+      "evidence": "한국 프로젝트로 감지되어 국문 템플릿이 사용됨"
+    },
+    {
+      "text": "PR 본문에 변경사항 요약이 포함되어 있다",
+      "passed": true,
+      "evidence": "요약 섹션이 제공되고 주요 변경사항이 설명됨"
+    },
+    {
+      "text": "PR 본문에 테스트 계획이 포함되어 있다",
+      "passed": true,
+      "evidence": "테스트 계획 섹션이 포함되어 있음"
+    },
+    {
+      "text": "PR 본문에 체크리스트가 포함되어 있다",
+      "passed": true,
+      "evidence": "체크리스트 섹션이 존재함"
+    }
+  ]
+}

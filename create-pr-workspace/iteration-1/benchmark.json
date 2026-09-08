@@ -1,0 +1,107 @@
+{
+  "skill_name": "create-pr",
+  "iteration": 1,
+  "results": [
+    {
+      "eval_id": "eval-korean-template",
+      "eval_name": "한국어 템플릿 사용",
+      "configurations": [
+        {
+          "name": "with_skill",
+          "duration_seconds": 54.9,
+          "total_tokens": 63129,
+          "pass_rate": 1.0,
+          "assertions_passed": 4,
+          "assertions_total": 4
+        },
+        {
+          "name": "without_skill",
+          "duration_seconds": 32.8,
+          "total_tokens": 61769,
+          "pass_rate": 1.0,
+          "assertions_passed": 4,
+          "assertions_total": 4
+        }
+      ],
+      "delta": {
+        "duration_seconds": 22.1,
+        "total_tokens": 1360,
+        "pass_rate": 0.0
+      }
+    },
+    {
+      "eval_id": "eval-auto-detect",
+      "eval_name": "자동 언어 감지",
+      "configurations": [
+        {
+          "name": "with_skill",
+          "duration_seconds": 37.2,
+          "total_tokens": 62176,
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5
+        },
+        {
+          "name": "without_skill",
+          "duration_seconds": 32.7,
+          "total_tokens": 61420,
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5
+        }
+      ],
+      "delta": {
+        "duration_seconds": 4.5,
+        "total_tokens": 756,
+        "pass_rate": 0.0
+      }
+    },
+    {
+      "eval_id": "eval-git-analysis",
+      "eval_name": "git 분석 기반 PR 생성",
+      "configurations": [
+        {
+          "name": "with_skill",
+          "duration_seconds": 63.2,
+          "total_tokens": 62414,
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5
+        },
+        {
+          "name": "without_skill",
+          "duration_seconds": 48.1,
+          "total_tokens": 63087,
+          "pass_rate": 1.0,
+          "assertions_passed": 5,
+          "assertions_total": 5
+        }
+      ],
+      "delta": {
+        "duration_seconds": 15.1,
+        "total_tokens": -673,
+        "pass_rate": 0.0
+      }
+    }
+  ],
+  "summary": {
+    "total_tests": 6,
+    "total_pass": 6,
+    "total_fail": 0,
+    "overall_pass_rate": 1.0,
+    "average_duration_with_skill": 51.8,
+    "average_duration_without_skill": 37.9,
+    "average_duration_delta": 13.9,
+    "average_tokens_with_skill": 62573,
+    "average_tokens_without_skill": 62092,
+    "average_tokens_delta": 481
+  },
+  "observations": [
+    "모든 테스트에서 100% 성공 (6/6 passing assertions)",
+    "스킬 사용 시 평균 13.9초 추가 소요 (gh pr create 등 실제 PR 생성 프로세스 때문)",
+    "토큰 사용량은 거의 동일 (481 tokens 차이, ±1%)",
+    "eval-2 (자동 감지)가 가장 효율적 - with_skill과 baseline 간 시간 차이 최소 (4.5초)",
+    "eval-1 (한국어 템플릿)이 가장 큰 시간 차이 (22.1초) - PR 생성 및 메타데이터 처리 때문",
+    "모든 평가에서 국문 템플릿이 올바르게 선택 및 사용됨 (프로젝트 한국어 감지 성공)"
+  ]
+}

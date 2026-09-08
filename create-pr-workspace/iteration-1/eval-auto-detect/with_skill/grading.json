@@ -1,0 +1,31 @@
+{
+  "eval_name": "auto-detect-language",
+  "run_id": "eval-auto-detect-with_skill",
+  "expectations": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "passed": true,
+      "evidence": "create-pr 스킬을 사용하여 PR 본문이 생성되고 필요한 모든 섹션이 포함됨"
+    },
+    {
+      "text": "프로젝트 언어가 올바르게 감지되었다",
+      "passed": true,
+      "evidence": "README.md에서 한글 비율 > 50%로 감지되어 국문 템플릿(template-ko.md)이 선택됨"
+    },
+    {
+      "text": "PR 본문에 변경사항 요약이 포함되어 있다",
+      "passed": true,
+      "evidence": "요약 섹션에 'create-pr 스킬 추가' 및 git 변경사항 기반 설명이 포함됨"
+    },
+    {
+      "text": "PR 본문에 테스트 계획이 포함되어 있다",
+      "passed": true,
+      "evidence": "테스트 계획 섹션에 수동 테스트와 자동 테스트 항목이 명시됨"
+    },
+    {
+      "text": "PR 본문에 체크리스트가 포함되어 있다",
+      "passed": true,
+      "evidence": "체크리스트 섹션에 코드 스타일, 자체 리뷰, 문서 업데이트 등의 확인 항목이 포함됨"
+    }
+  ]
+}

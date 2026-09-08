@@ -1,0 +1,26 @@
+{
+  "eval_name": "korean-template-usage",
+  "run_id": "eval-korean-template-with_skill",
+  "expectations": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "passed": true,
+      "evidence": "GitHub PR URL (https://github.com/okjyp-cns/react-component-generator-260908/pull/1)이 생성되었으며, fork branch feat/create-pr-skill에서 main으로의 PR이 확인됨"
+    },
+    {
+      "text": "국문 템플릿이 사용되었다",
+      "passed": true,
+      "evidence": "PR 본문의 섹션 헤더가 모두 한국어 (요약, 변경사항, 테스트 계획, 체크리스트)로 작성되어 있음"
+    },
+    {
+      "text": "PR 제목에 'feat:' prefix가 포함되어 있다",
+      "passed": true,
+      "evidence": "PR 제목: 'feat: 새로운 기능 추가' - Conventional Commit 형식 준수"
+    },
+    {
+      "text": "PR 본문에 변경된 파일 목록이 포함되어 있다",
+      "passed": true,
+      "evidence": "수정된 파일 섹션에 create-pr/SKILL.md, template-ko.md, template-en.md, evals.json 나열됨"
+    }
+  ]
+}

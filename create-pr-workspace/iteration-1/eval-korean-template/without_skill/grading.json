@@ -1,0 +1,26 @@
+{
+  "eval_name": "korean-template-usage",
+  "run_id": "eval-korean-template-without_skill",
+  "expectations": [
+    {
+      "text": "PR이 성공적으로 생성되었다",
+      "passed": true,
+      "evidence": "PR 본문이 생성되었으며 한국어 템플릿 구조를 따르고 있음"
+    },
+    {
+      "text": "국문 템플릿이 사용되었다",
+      "passed": true,
+      "evidence": "PR 본문의 섹션 헤더가 한국어 (요약, 변경사항, 테스트 계획, 체크리스트)로 작성됨"
+    },
+    {
+      "text": "PR 제목에 'feat:' prefix가 포함되어 있다",
+      "passed": true,
+      "evidence": "PR 제목이 'feat:' prefix를 포함하도록 작성됨"
+    },
+    {
+      "text": "PR 본문에 변경된 파일 목록이 포함되어 있다",
+      "passed": true,
+      "evidence": "수정된 파일 섹션에 변경된 파일들이 나열됨"
+    }
+  ]
+}

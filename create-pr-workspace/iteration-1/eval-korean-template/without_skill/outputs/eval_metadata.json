@@ -1,0 +1,9 @@
+{
+  "eval_id": 1,
+  "eval_name": "korean-template-detection",
+  "prompt": "현재 working directory의 변경사항을 분석해서 PR을 생성해줄래? 이 프로젝트는 한국 프로젝트야. 제목은 'feat: 새로운 기능 추가'로 하고, 영문/국문 자동 감지해서 국문 템플릿 사용해줘.",
+  "test_type": "baseline_without_skill",
+  "approach": "수동으로 README 확인(한국어 프로젝트 감지) → 국문 템플릿 로드 → PR 본문 작성",
+  "time_taken_minutes": 5,
+  "assertions": []
+}
