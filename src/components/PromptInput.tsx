@@ -4,6 +4,7 @@ import { validatePrompt, MAX_PROMPT_LENGTH } from '../utils/validatePrompt';
 interface PromptInputProps {
   onGenerate: (prompt: string) => void;
   isLoading: boolean;
+  promptHistory?: string[];
 }
 
 const EXAMPLES = [
@@ -15,7 +16,7 @@ const EXAMPLES = [
   '테이블 행 상세보기 패널. 선택한 고객의 기본 정보와 최근 활동 표시',
 ];
 
-export function PromptInput({ onGenerate, isLoading }: PromptInputProps) {
+export function PromptInput({ onGenerate, isLoading, promptHistory = [] }: PromptInputProps) {
   const [prompt, setPrompt] = useState('');
   const validation = validatePrompt(prompt);
 
@@ -23,11 +24,17 @@ export function PromptInput({ onGenerate, isLoading }: PromptInputProps) {
     e.preventDefault();
     if (validation.isValid && !isLoading) {
       onGenerate(prompt.trim());
+      setPrompt('');
     }
   };
 
   const handleExampleClick = (example: string) => {
     setPrompt(example);
+  };
+
+  const handleHistoryClick = (historyPrompt: string) => {
+    setPrompt(historyPrompt);
+    onGenerate(historyPrompt);
   };
 
   return (
@@ -71,6 +78,25 @@ export function PromptInput({ onGenerate, isLoading }: PromptInputProps) {
           <div className="prompt-error">{validation.error}</div>
         )}
       </form>
+      {promptHistory.length > 0 && (
+        <div className="prompt-history">
+          <span className="examples-label">최근 프롬프트</span>
+          <div className="history-chips">
+            {promptHistory.map((historyPrompt, index) => (
+              <button
+                key={`${historyPrompt}-${index}`}
+                className="history-chip"
+                onClick={() => handleHistoryClick(historyPrompt)}
+                type="button"
+                title={historyPrompt}
+              >
+                {historyPrompt.length > 50 ? `${historyPrompt.slice(0, 50)}...` : historyPrompt}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="prompt-examples">
         <span className="examples-label">예시 프롬프트</span>
         {EXAMPLES.map((example) => (
