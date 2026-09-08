@@ -268,9 +268,8 @@
 
 .prompt-form {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
   gap: 12px;
-  align-items: end;
 }
 
 .prompt-textarea {
@@ -318,6 +317,36 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+.prompt-input-footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.prompt-counter {
+  text-align: right;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding-right: 4px;
+}
+
+.prompt-counter span.warning {
+  color: #ea8c55;
+  font-weight: 600;
+}
+
+.prompt-error {
+  padding: 10px 12px;
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .prompt-examples {
